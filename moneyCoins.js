@@ -1,5 +1,28 @@
 function moneyCoins (money) {
   // your implementation code here
+  var arr_result = []
+  // var tempMoney = 0;
+  var coin = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+
+  for (var i = 0; i < coin.length; i++) {
+    if (money > coin[i]) {
+      money = money - coin[i]
+      arr_result.push(coin[i])
+    }
+    if (money > coin[i]) {
+      money = money - coin[i]
+      arr_result.push(coin[i])
+    }
+    if (money > coin[i]) {
+      money = money - coin[i]
+      arr_result.push(coin[i])
+    }
+    if (money >= coin[i]) {
+      money = money - coin[i]
+      arr_result.push(coin[i])
+    }
+  }
+  return arr_result
 }
 
 // Drive code
