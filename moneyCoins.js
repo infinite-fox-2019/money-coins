@@ -1,5 +1,22 @@
-function moneyCoins (money) {
+function moneyCoins(money) {
   // your implementation code here
+  let result = []
+
+  let coins = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+
+  while (money > 0) {
+    for (let i = 0; i < coins.length; i++) {
+      if (money >= coins[i]) {
+        debugger
+        result.push(coins[i])
+        money -= coins[i];
+        i = 0;
+        break;
+      }
+    }
+  }
+
+  return result;
 }
 
 // Drive code
