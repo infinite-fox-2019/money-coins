@@ -1,5 +1,16 @@
-function moneyCoins (money) {
+function moneyCoins(money) {
   // your implementation code here
+  const pecahan = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 1]
+  const getMoneyCoins = []
+
+  for (let i = 0; i < pecahan.length; i++) {
+     while (money >= pecahan[i]) {
+      getMoneyCoins.push(pecahan[i])
+      money -= pecahan[i]
+    }
+  }
+
+  return getMoneyCoins 
 }
 
 // Drive code
