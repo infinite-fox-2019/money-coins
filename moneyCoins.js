@@ -1,5 +1,19 @@
-function moneyCoins (money) {
-  // your implementation code here
+function moneyCoins(money) {
+  let output = []
+  // let pecahan = [1, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]
+  let pecahan = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let count = 0
+  while (money) {
+    debugger
+    if ((money - pecahan[count]) >= 0) {
+      output.push(pecahan[count])
+      money -= pecahan[count]
+      count--
+    }
+    count++
+  }
+
+  return output
 }
 
 // Drive code
