@@ -1,5 +1,18 @@
 function moneyCoins (money) {
   // your implementation code here
+  const pecahan = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+
+  const result = []
+
+  for (let i = 0; i < pecahan.length; i++) {
+    money = String(money)
+    if (String(pecahan[i]).length == money.length && money / pecahan[i] >= 1) {
+      money -= pecahan[i]
+      result.push(pecahan[i])
+      i -= 1
+    }
+  }
+  return result
 }
 
 // Drive code
