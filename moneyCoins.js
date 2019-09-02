@@ -8,6 +8,7 @@ function moneyCoins(money) {
       i--;
     }
   }
+
   return output;
 }
 
