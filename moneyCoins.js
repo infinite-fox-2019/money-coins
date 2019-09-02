@@ -1,5 +1,14 @@
-function moneyCoins (money) {
-  // your implementation code here
+function moneyCoins(money){
+	let result = [];
+	const coins = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+
+	for(var coin of coins){
+		while(money>=coin){
+			result.push(coin)
+			money-=coin;
+		}
+	}
+	return result
 }
 
 // Drive code
