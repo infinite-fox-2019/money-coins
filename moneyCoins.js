@@ -1,7 +1,18 @@
 function moneyCoins (money) {
   // your implementation code here
-}
-
+  var counter = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  var result = [];
+  while (money > 0) {
+    for (var i = 0; i < counter.length; i++) {
+      if (money >= counter[i]) {
+          money = money - counter[i];
+          result.push(counter[i]);
+          break;
+      }
+    }
+  }
+  return result;
+};
 // Drive code
 console.log(moneyCoins(543))
 //output : [ 500, 20, 20, 1, 1, 1 ]
