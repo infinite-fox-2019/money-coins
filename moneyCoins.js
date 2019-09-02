@@ -1,5 +1,18 @@
 function moneyCoins (money) {
   // your implementation code here
+  var pecahan = [1, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]
+  var result = []
+  for(i=pecahan.length -1 ; i>=0 ; i--){
+    if(pecahan[i] <= money){
+      result.push(pecahan[i])
+      money -= pecahan[i]
+      while(pecahan[i] <= money){
+        result.push(pecahan[i])
+        money-= pecahan[i]
+      }
+    }
+  }
+  return result
 }
 
 // Drive code
